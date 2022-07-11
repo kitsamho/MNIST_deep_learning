@@ -29,7 +29,7 @@ def get_inference(image_path: str, inference_transformer: torchvision.transforms
     return probabilities
 
 
-st.title('Written Digit Predictor')
+st.title('MNIST Digit Predictor')
 # Create a canvas component
 canvas = st_canvas(
     fill_color="#FFFFFF",
@@ -61,6 +61,6 @@ predict_prob = get_inference(image, inference_transformer, model)
 
 # plot results
 fig = px.bar(pd.DataFrame(predict_prob))
-fig = fig.update_xaxes(title='Number Predicted')
-fig = fig.update_yaxes(title='Probability')
+fig = fig.update_xaxes(title='Number Predicted', range=[0, 10])
+fig = fig.update_yaxes(title='Probability', range=[0, 1])
 st.plotly_chart(fig)
