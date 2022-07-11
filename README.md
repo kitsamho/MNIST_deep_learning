@@ -15,13 +15,17 @@ I modularised the code into sensible functions in order to train and test the mo
 - `train` : trains model
 - `test` : tests model
 
-- 'train_test_model' : is the main script that implements all the above. The model was trained using negative log likelihood loss
-- and and Adam optimizer. 20 Epochs of training were implemented and the model saved locally for later inference.
+- `train_test_model` : is the main script that implements the above functionality. 
+  - The model was trained using a negative log likelihood loss function
+  - Adam optimizer was used for learning
+  - 20 Epochs of training were implemented
+  - The model saved locally for later inference.
+  - Performance here [GET PLOTS]
 
 
 ## model_inference
 
-A fun way to perform inference will be through a draw pad on streamlit where we can get model inferences for novel digit 
-inputs from users.
+Half the fun of building models is to actually use them. I thought a fun way to perform inference will be through a 
+draw pad on streamlit where we can get model inferences for novel digit inputs from users. 
 
 
