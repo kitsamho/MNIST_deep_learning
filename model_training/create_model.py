@@ -1,10 +1,10 @@
 from torch import nn
 
 def create_model():
-    # Build a feed-forward network for minst dataset
-    input_size = 784 #28x28
-    output_size = 10
-    model = nn.Sequential(nn.Linear(input_size, 512), #Performs W.x + b
+    # Build a feed-forward network for MNIST dataset
+    input_size = 784 #28x28 pixels
+    output_size = 10 # ten possible classes
+    model = nn.Sequential(nn.Linear(input_size, 512),
                           nn.ReLU(),                  # Adds Non-Linearity - this is an activation function
                           nn.Linear(512, 256),
                           nn.ReLU(),
